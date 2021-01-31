@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  margin: auto;
+  width: 40rem;
+
+}
+.App nav {
+  background-color: rgb(99, 226, 99);
+  height: 3.5rem;
+}
+.App ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.App li {
+  display: inline-block;
+  margin: 0 2rem;
+  height: 100%;
+}
+.App a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+}
+
+.App a:hover,
+.App a:active,
+.App a.active {
+  color: rgb(236, 138, 138);
+  border-bottom: 0.2rem solid rgb(161, 14, 14);
+}
+
+main{
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+.home{
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.home div{
+  color: rgb(11, 160, 160);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: .8rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  box-shadow: 0 0 .1rem .1rem gray;
+  margin: .5rem;
+}
+
+.home div:hover,
+.home div:active{
+  color: rgb(235, 96, 15);
+  font-size: 2.2rem;
+  background-color: greenyellow;
+}
+
+.image{
+  margin: auto;
+  width: 60%;
+}
+.image img{
+  width: 100%;
+}
+
+.details{
+  margin: auto;
+  width: 60%;
+  font-size: 15rem;
+  text-align: center;
+  color: rgb(3, 78, 218);
+}
+
+p{
+  color: blue;
+}
+p:hover{
+  text-decoration: underline;
+}
