@@ -1,0 +1,25 @@
+.productForm{
+    margin: auto;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.productForm input{
+    border: none;
+    border-bottom: .3rem solid orange;
+    margin-bottom: .5rem;
+   font-size: 1.2rem;
+   color: blue;
+   outline: none;
+}
+
+.productForm button{
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+    color:white;
+    background-color: rgb(119, 119, 230);
+    border-radius: .3rem;
+    outline: none;
+}

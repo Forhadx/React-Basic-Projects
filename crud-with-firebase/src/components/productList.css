@@ -1,0 +1,62 @@
+.product-list{
+    margin: auto;
+    margin-top: 1.5rem;
+    width: 40rem;
+    box-sizing: border-box;
+}
+
+.single-product{
+    box-shadow: 0 0 .1rem 0.1rem blue;
+    border-radius: .5rem;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: .3rem;
+}
+h2{
+    border-bottom: .3rem solid blue;
+    padding-bottom: .1rem;
+}
+.single-product div:first-child{
+    border-right: 2px solid blue;
+    padding-right: .5rem;
+    
+}
+
+.single-product button{
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: rgb(255, 250, 250);
+    border-radius: .5rem;
+    margin-left: .3rem;
+}
+.single-product button:focus{
+    outline: none;
+}
+.single-product  .edit{
+    background-color: rgba(19, 231, 19, 0.89);
+    border-color: rgb(6, 207, 6);
+}
+
+.single-product  .edit:hover{
+    color: green;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.single-product .delete{
+    background-color: rgba(238, 17, 17, 0.856);
+    border-color: red;
+}
+
+.single-product .delete:hover{
+    color: red;
+    font-size: 1.2rem;
+    background-color: white;
+}
