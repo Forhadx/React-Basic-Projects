@@ -7,3 +7,5 @@
 3. crud-with-firebase
 
 4. calculator-redux
+
+5. modal

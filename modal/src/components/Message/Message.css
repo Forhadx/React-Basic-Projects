@@ -1,0 +1,40 @@
+.messagebtn{
+    color: white;
+    font-size: 1rem;
+    background-color: blue;
+    width: 15rem;
+    height: 2.5rem;
+}
+
+.messagebtn:hover{
+    background-color: white;
+    color: blue;
+}
+
+.no{
+    width: 5rem;
+    height: 2rem;
+    color: white;
+    background-color: red;
+    font-size: 1rem;
+    margin: 0 3rem;
+}
+
+.no:hover{
+    background-color: rgb(240, 178, 178);
+    color: black;
+}
+
+.yes{
+    width: 5rem;
+    height: 2rem;
+    color: white;
+    background-color: green;
+    font-size: 1rem;
+    margin: 0 3rem;
+}
+
+.yes:hover{
+    background-color: rgb(178, 240, 188);
+    color: black;
+}
