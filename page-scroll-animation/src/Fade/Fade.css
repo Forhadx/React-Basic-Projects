@@ -1,0 +1,17 @@
+.all-boxes{
+    margin:auto;
+    
+}
+
+h2{
+    margin-bottom: 50rem;
+}
+
+.box{
+    margin: auto;
+    width: 40rem;
+    height: 5rem;
+    background-color: rgb(187, 187, 241);
+    border-radius: .5rem;
+    margin-bottom: 10rem;
+}

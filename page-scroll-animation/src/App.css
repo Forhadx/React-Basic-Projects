@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #2ddf5c;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.navbar li a{
+  padding: 0 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+main {
+  margin: auto;
+  margin-top: 5rem;
+}
