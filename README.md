@@ -13,3 +13,5 @@
 6. navbar-sidebar
 
 7. page-scroll-animation
+
+8. sorting-with-firebase
