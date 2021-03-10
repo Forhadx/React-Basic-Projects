@@ -1,0 +1,14 @@
+ul{
+    list-style: none;
+}
+
+li{
+    margin: auto;
+    box-shadow: 0 0 .1rem .1rem rgb(201, 198, 198);
+    margin-bottom: .5rem;
+    padding: .3rem 0;
+
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+}
