@@ -1,0 +1,46 @@
+.auth{
+    margin: auto;
+    margin-top: 15rem;
+    width: 20rem;
+}
+.auth-form{
+    box-sizing: border-box;
+    box-shadow: .1rem .1rem .2rem .2rem gray;
+    padding: 1.3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form input{
+    width: 100%;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.auth-form button{
+    color: white;
+    background-color: rgb(243, 97, 122);
+    width: 5rem;
+    height: 1.8rem;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+.auth-form p{
+    color: blue;
+}
+
+.auth-form p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth-form h5{
+    color: red;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}

@@ -15,3 +15,10 @@
 7. page-scroll-animation
 
 8. sorting-with-firebase
+
+9. search-with-firebase
+
+10. auth-by-gmail
+
+11. auth-by-form
+

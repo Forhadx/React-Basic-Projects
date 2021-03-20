@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.App nav {
+  height: 3.5rem;
+}
+.App ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.App li {
+  display: inline-block;
+  margin: 0 2rem;
+  height: 100%;
+}
+.App a {
+  color: green;
+  text-decoration: none;
+  font-size: 2rem;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+}
+
+.App a:hover,
+.App a:active,
+.App a.active {
+  color: rgb(236, 138, 138);
+  border-bottom: 0.2rem solid rgb(161, 14, 14);
+}
+
+.App main{
+  margin-top: 5rem;
+}
