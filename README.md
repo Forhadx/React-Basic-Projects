@@ -6,19 +6,17 @@
 
 3. crud-with-firebase
 
-4. calculator-redux
+4. modal
 
-5. modal
+5. navbar-sidebar
 
-6. navbar-sidebar
+6. page-scroll-animation
 
-7. page-scroll-animation
+7. sorting-with-firebase
 
-8. sorting-with-firebase
+8. search-with-firebase
 
-9. search-with-firebase
+9. auth-by-gmail
 
-10. auth-by-gmail
-
-11. auth-by-form
+10. auth-by-form
 

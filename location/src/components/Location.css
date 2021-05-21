@@ -1,0 +1,41 @@
+
+.main{
+    margin: auto;
+    margin-top: 10rem;
+    width: 20rem;
+    padding: 5rem;
+    box-shadow: .2rem .2rem .4rem gray;
+
+}
+
+.btn-location{
+    color: white;
+    background: linear-gradient(to right, #000428, #004e92); 
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-location:hover{
+    background: white;
+    color: black;
+}
+
+
+.map-link{
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-top: 2rem;
+    
+}
+
+.map-link:hover{
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+}
+
+.error{
+    color: red;
+}
