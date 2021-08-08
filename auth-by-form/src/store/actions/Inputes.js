@@ -11,14 +11,18 @@ export const inputSuccess = (id, data) => {
 
 export const inputIn = (data, token) => {
   return (dispatch) => {
-    axios.post("https://auth-by-form-default-rtdb.firebaseio.com/AllInputes.json?auth=" + token , data)
+    axios
+      .post(
+        "https://auth-by-form-default-rtdb.firebaseio.com/AllInputes.json?auth=" +
+          token,
+        data
+      )
       .then((response) => {
         dispatch(inputSuccess(response.data.name, data));
       })
       .catch((err) => {
         console.log("error: ", err);
       });
-      
   };
 };
 
@@ -30,14 +34,17 @@ export const InputFetchSuccess = (data) => {
 };
 
 export const InputFetch = (token, userId) => {
+  //console.log("token: ", userId);
   const queryParams =
     "?auth=" + token + '&orderBy="userId"&equalTo="' + userId + '"';
   return (dispatch) => {
     axios
       .get(
-        "https://auth-by-form-default-rtdb.firebaseio.com/AllInputes.json" + queryParams
+        "https://auth-by-form-default-rtdb.firebaseio.com/AllInputes.json" +
+          queryParams
       )
       .then((response) => {
+        console.log("res1: ", response);
         const fetchPosts = [];
         for (let key in response.data) {
           fetchPosts.push({

@@ -34,6 +34,47 @@
   border-bottom: 0.2rem solid rgb(161, 14, 14);
 }
 
-.App main{
+.App main {
   margin-top: 5rem;
+}
+
+/* input form*/
+
+.form__input {
+  margin: auto;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input label {
+  text-align: left;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.form__input input {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.form__input select {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.form__input p {
+  text-align: left;
+  color: red;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.form__input button {
+  margin-top: 1rem;
+}
+
+.center {
+  width: 20rem;
+  margin: auto;
 }
