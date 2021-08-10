@@ -1,23 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/index";
 
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
 
 import "../App.css";
 
 const InputFrom = React.memo((props) => {
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .required("Name is required")
+      .min(3, "length should be minimum 3")
+      .max(6, "length should be maximum 6"),
+    email: Yup.string().required("Email is required").email("Email is invalid"),
+    password: Yup.string()
+      .required("Password is required")
+      .min(5, "Password at least 5 char"),
+    confirmPassword: Yup.string()
+      .required("Confirm Password is required")
+      .oneOf([Yup.ref("password"), null], "Confirm password doesn't match"),
+  });
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
 
   const userHandler = (data) => {
-    //console.log("data: ", data);
+    console.log("data: ", data);
     props.onAddPost({ ...data, userId: props.userId }, props.token);
-    reset({ firstName: "", salary: "" });
+    reset();
   };
 
   return (
@@ -27,33 +45,40 @@ const InputFrom = React.memo((props) => {
         <input
           type="text"
           placeholder="length should be between 3 to 6"
-          {...register("firstName", {
-            required: "first name is required",
-            minLength: { value: 3, message: "length should be minimum 3" },
-            maxLength: { value: 6, message: "length should be maximum 6" },
-          })}
+          {...register("name")}
         />
-        {errors.firstName && <p>{errors.firstName.message}</p>}
+        <p>{errors.name?.message}</p>
 
-        <label>SALARY</label>
-        <input
-          type="number"
-          placeholder="salary range 120 to 800"
-          {...register("salary", {
-            required: "Salary is required",
-            min: { value: 120, message: "minimum value is 120" },
-            max: { value: 800, message: "maximum value is 800" },
-          })}
-        />
-        {errors.salary && <p>{errors.salary.message}</p>}
-
-        <label>GENDER</label>
-        <select {...register("gender", { required: "select any option" })}>
+        <label>Gender</label>
+        <select {...register("gender")}>
           <option value="male">male</option>
           <option value="female">female</option>
           <option value="other">other</option>
         </select>
-        {errors.gender && <p>{errors.gender.message}</p>}
+
+        <label>Email</label>
+        <input
+          type="text"
+          placeholder="enter your email"
+          {...register("email")}
+        />
+        <p>{errors.email?.message}</p>
+
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="At least 5 char"
+          {...register("password")}
+        />
+        <p>{errors.password?.message}</p>
+
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          placeholder="At least 5 char"
+          {...register("confirmPassword")}
+        />
+        <p>{errors.confirmPassword?.message}</p>
 
         <button type="submit">ADD</button>
       </form>
@@ -75,46 +100,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(InputFrom);
-
-/*
-
- event.preventDefault();
-    props.onAddPost(
-      {
-        inputes: name,
-        userId: props.userId,
-      },
-      props.token
-    );
-    setName("");
-  };
-
-  return (
-    <div>
-      <form onSubmit={addProductFromHandler}>
-        <input
-          type="text"
-          placeholder="Product name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <button type="submit">ADD</button>
-      </form>
-    </div>
-  );
-  
-*/
-
-/*
-
-        <input
-          type="text"
-          placeholder="Product name"
-          {...register("firstName", { required: true, maxLength: 5 })}
-        />
-        {errors.firstName?.type === "required" && <p>first name is required</p>}
-        {errors.firstName?.type === "maxLength" && (
-          <p>length should be minimum 5</p>
-        )}
-
-*/

@@ -1,6 +1,8 @@
 # module use
 
-    - react-hook-form
-    - firebase
-    - axios
-    - redux
+    react-hook-form
+    yup
+    @hookform/resolvers
+    firebase
+    axios
+    redux

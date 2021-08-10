@@ -18,16 +18,20 @@ const InputList = React.memo((props) => {
         <thead>
           <tr>
             <th>name</th>
-            <th>salary</th>
             <th>gender</th>
+            <th>gmail</th>
+            <th>password</th>
+            <th>Confirm password</th>
           </tr>
         </thead>
         <tbody>
           {props.inputData.map((p) => (
             <tr key={p.id}>
-              <td>{p.firstName}</td>
-              <td>{p.salary}</td>
+              <td>{p.name}</td>
               <td>{p.gender}</td>
+              <td>{p.email}</td>
+              <td>{p.password}</td>
+              <td>{p.confirmPassword}</td>
             </tr>
           ))}
         </tbody>
