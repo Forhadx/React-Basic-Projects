@@ -1,0 +1,91 @@
+@import "../../../var.scss";
+
+.dashboard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        & h1 {
+            font-size: 1.4rem;
+            color: $color-black;
+        }
+
+        &--filter {
+            border: 1px solid $color-light-gray;
+            font-size: 1rem;
+            margin-right: 5rem;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.5rem;
+            border-radius: 0.4rem;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: $color-black;
+            cursor: pointer;
+
+            & span {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+
+        &--box {
+            width: 30%;
+            border-radius: 1rem;
+            padding: 1rem;
+
+            &-icons {
+                display: flex;
+                justify-content: space-between;
+                font-weight: bold;
+                font-size: 1.6rem;
+
+                & span {
+                    color: $color-white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.3rem;
+                    border-radius: 0.8rem;
+                    background-color: $color-black;
+                    font-size: 2.4rem;
+                }
+            }
+
+            & h2 {
+                font-size: 1.8rem;
+                margin: 0.5rem 0;
+            }
+
+            & p {
+                font-size: 1.4rem;
+
+                & span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.green {
+    background-color: $color-light-green;
+}
+
+.blue {
+    background-color: $color-light-blue;
+}
+
+.red {
+    background-color: $color-light-red;
+}

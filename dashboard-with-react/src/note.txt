@@ -1,0 +1,115 @@
+import React from "react";
+import "./App.scss";
+import {
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+} from "recharts";
+
+const data = [
+    {
+        name: "Page A",
+        uv: 4000,
+        amt: 2400,
+    },
+    {
+        name: "Page B",
+        uv: 3000,
+        amt: 2210,
+    },
+    {
+        name: "Page C",
+        uv: 2000,
+        amt: 2290,
+    },
+    {
+        name: "Page D",
+        uv: 2780,
+        amt: 2000,
+    },
+    {
+        name: "Page E",
+        uv: 1890,
+        amt: 2181,
+    },
+    {
+        name: "Page F",
+        uv: 2390,
+        amt: 2500,
+    },
+    {
+        name: "Page G",
+        uv: 3490,
+        amt: 2100,
+    },
+];
+
+const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="custom-tooltip">
+                <p className="label">{`${label} : ${payload[0].value}`}</p>
+                <p>Anything you want can be displayed here.</p>
+            </div>
+        );
+    }
+
+    return null;
+};
+
+const App = () => {
+    return (
+        <div className="App">
+            <h2>graph</h2>
+            <LineChart
+                width={500}
+                height={300}
+                data={data}
+                margin={{
+                    top: 10,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                }}
+            >
+                <CartesianGrid
+                    strokeDasharray="3 3"
+                    horizontal="2"
+                    vertical=""
+                />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip content={<CustomTooltip />} />
+                <Line
+                    type="monotone"
+                    dataKey="uv"
+                    stroke="#7b7b7b"
+                    dot={{
+                        fill: "#14121e",
+                        r: 8,
+                        stroke: "#e2e9f5",
+                        strokeWidth: 4,
+                    }}
+                    activeDot={{
+                        fill: "#14121e",
+                        r: 8,
+                        stroke: "#e2e9f5",
+                        strokeWidth: 4,
+                    }}
+                />
+            </LineChart>
+        </div>
+    );
+};
+
+export default App;
+
+/*
+          <Tooltip content={<CustomTooltip />} />
+
+          
+*/

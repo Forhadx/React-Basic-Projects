@@ -1,0 +1,27 @@
+@import "./var.scss";
+
+.App {
+    background-color: $color-white;
+    font-size: 2rem;
+    border-radius: 3rem;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+
+    & .combine-main {
+        display: flex;
+        height: 100%;
+    }
+
+    & .sidebar-shadow {
+        position: fixed;
+        top: -10rem;
+        bottom: -10rem;
+        left: 0;
+        width: 15%;
+        width: 18vw;
+        background-color: $color-sidebar;
+    }
+}

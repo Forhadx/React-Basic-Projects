@@ -1,0 +1,41 @@
+@import "../../../var.scss";
+
+.chart {
+    padding: 1rem 1rem 0 1rem;
+    overflow: hidden;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        &--headers {
+            & h2 {
+                font-size: 1.2rem;
+            }
+
+            & p {
+                font-size: 1.2rem;
+            }
+        }
+
+        &--option {
+            & span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__graph {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+.custom-tooltip {
+    padding: 0.5rem 1rem;
+    border-radius: 1.6rem;
+    font-size: 1rem;
+    background-color: $color-black;
+    color: $color-white;
+}

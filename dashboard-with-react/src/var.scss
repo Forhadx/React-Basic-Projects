@@ -1,0 +1,44 @@
+/* variables */
+$header-height: 7rem;
+$max-width: 130rem;
+
+$color-body: #f6f6f6;
+$color-sidebar: #f6f4f586;
+$color-black: #14121e;
+$color-white: #ffffff;
+
+$color-dark-gray: #8b8b90;
+$color-light-gray: #bdc1c7;
+$color-dark-green: #9dcfa8;
+$color-light-green: #eafdee;
+$color-dark-blue: #b9c6e2;
+$color-light-blue: #e8f0fb;
+$color-dark-red: #e6b092;
+$color-light-red: #ffefe7;
+
+/*  responsive media  */
+@mixin respond($breakpoint) {
+    @if ($breakpoint == phone) {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == port) {
+        @media (min-width: 37.5em) and (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == land) {
+        @media (min-width: 56.25em) and (max-width: 75em) {
+            @content;
+        }
+    }
+
+    @if ($breakpoint == desktop) {
+        @media (min-width: 75em) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "../../../var.scss";
+
+.bottom-table {
+    & h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & ul {
+        list-style: none;
+        padding-right: 1rem;
+
+        & li {
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            color: $color-dark-gray;
+            margin-bottom: 0.5rem;
+
+            & .list-icon {
+                border-radius: 50%;
+                height: 2.4rem;
+                width: 2.4rem;
+                font-size: 1.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+            }
+        }
+    }
+}
