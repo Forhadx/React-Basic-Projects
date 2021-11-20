@@ -1,0 +1,34 @@
+.App {
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid green;
+}
+
+.header a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: gray;
+}
+
+.header a:hover,
+.header a.active {
+  color: red;
+  text-decoration: underline;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
+.products a {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
