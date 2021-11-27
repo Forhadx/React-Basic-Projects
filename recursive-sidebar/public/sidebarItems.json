@@ -1,0 +1,78 @@
+{
+  "module_type": "menu",
+  "menu": [
+    {
+      "id": "1",
+      "link": "/",
+      "icon": "ri-home-2-fill",
+      "title": "Dashboard"
+    },
+    {
+      "id": "2",
+      "link": "contact",
+      "icon": "ri-account-circle-fill",
+      "title": "Contact",
+
+      "subMenu": [
+        {
+          "id": "1",
+          "link": "contact-one",
+          "title": "Contact one"
+        },
+        {
+          "id": "2",
+          "link": "contact-one",
+          "title": "Contact two"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "link": "task",
+      "icon": "ri-archive-fill",
+      "title": "Tasks",
+      "subMenu": [
+        {
+          "id": "1",
+          "link": "task-one",
+          "title": "Task One"
+        },
+        {
+          "id": "2",
+          "link": "#",
+          "title": "More"
+        },
+        {
+          "id": "3",
+          "link": "task-one",
+          "title": "Task One"
+        },
+        {
+          "id": "4",
+          "link": "#",
+          "title": "More"
+        }
+      ]
+    },
+    {
+      "link": "components",
+      "icon": "ri-user-fill",
+      "title": "Components",
+
+      "subMenu": [
+        {
+          "link": "grids",
+          "title": "Grids"
+        },
+        {
+          "link": "alerts",
+          "title": "Alerts"
+        },
+        {
+          "link": "buttons",
+          "title": "buttons"
+        }
+      ]
+    }
+  ]
+}

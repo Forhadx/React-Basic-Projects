@@ -1,0 +1,65 @@
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+a {
+  display: inline-block;
+  background-color: rgb(26, 23, 23);
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.menuItems {
+  background-color: green;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.menuItems > li {
+  color: white;
+  border-bottom: 1px solid gray;
+  padding: 0.3rem 1rem;
+  /* z-index: 10; */
+}
+
+.subMenu {
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+
+  /* transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out; */
+
+  background-color: rgb(46, 107, 46);
+  /* z-index: -1; */
+}
+
+.subMenulist {
+  display: none;
+  color: white;
+  /* background-color: red; */
+  /* border-bottom: 1px solid white; */
+}
+
+.open {
+  max-height: 100px;
+  transition: max-height 0.4s ease-in-out;
+
+  /* transform: scaleY(1); */
+}
+
+.close {
+  max-height: 0;
+  transition: max-height 0.4s;
+}
+
+.liOpen {
+  display: block;
+}
