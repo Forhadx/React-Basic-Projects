@@ -1,8 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-// import MetisMenu from "@metismenu/react";
-// import "metismenujs/dist/metismenujs.css";
-import SideItems from "./sidebarItems.json";
+
 import axios from "axios";
 import ClassNames from "classnames";
 
@@ -12,7 +9,7 @@ const Sidebar = () => {
 
   const [sideItems, setSideItems] = useState([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     axios.get("./sidebarItems.json").then((res) => {
       console.log(res.data.menu);
       setSideItems([...res.data.menu]);
@@ -40,18 +37,13 @@ const Sidebar = () => {
               // close: flag && mId !== pItem.id,
             })}
           >
-            <ul>
+            <ul
+              className={ClassNames("subMenulist", {
+                liOpen: flag && mId === pItem.id,
+              })}
+            >
               {pItem.subMenu &&
-                pItem.subMenu.map((sub) => (
-                  <li
-                    key={sub.id}
-                    className={ClassNames("subMenulist", {
-                      liOpen: flag && mId === pItem.id,
-                    })}
-                  >
-                    {sub.title}
-                  </li>
-                ))}
+                pItem.subMenu.map((sub) => <li key={sub.id}>{sub.title}</li>)}
             </ul>
           </div>
         </li>
@@ -61,33 +53,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-/*
- {sideItems && (
-        <MetisMenu>
-          {sideItems.map((pItem) => (
-            <>
-              {pItem.subMenu ? (
-                <li>
-                  <Link to="#" className="has-arrow">
-                    {pItem.title}
-                  </Link>
-                  <ul>
-                    {pItem.subMenu &&
-                      pItem.subMenu.map((sItem) => (
-                        <li>
-                          <NavLink to="/about">{sItem.title}</NavLink>
-                        </li>
-                      ))}
-                  </ul>
-                </li>
-              ) : (
-                <NavLink to="/" exact>
-                  {pItem.title}
-                </NavLink>
-              )}
-            </>
-          ))}
-        </MetisMenu>
-      )}
-*/
